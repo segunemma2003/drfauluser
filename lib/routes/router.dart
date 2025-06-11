@@ -1,7 +1,9 @@
+import '/resources/pages/profile_photo_page.dart';
+import '/resources/pages/address_information_page.dart';
+import '/resources/pages/personal_information_page.dart';
 import '/resources/pages/verify_signup_page.dart';
 import '/resources/pages/signup_page.dart';
 import '/resources/pages/signin_page.dart';
-import '/resources/pages/onboarding_navigation_hub.dart';
 import '/resources/pages/not_found_page.dart';
 import '/resources/pages/home_page.dart';
 import 'package:nylo_framework/nylo_framework.dart';
@@ -37,8 +39,10 @@ appRouter() => nyRoutes((router) {
       //
       // });
       router.add(NotFoundPage.path).unknownRoute();
-      router.add(OnboardingNavigationHub.path);
       router.add(SigninPage.path);
       router.add(SignupPage.path);
-      router.add(VerifySignupPage.path).initialRoute();
-    });
+      router.add(VerifySignupPage.path);
+      router.add(PersonalInformationPage.path).initialRoute();
+      router.add(AddressInformationPage.path);
+  router.add(ProfilePhotoPage.path);
+});
